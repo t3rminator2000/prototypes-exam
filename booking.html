@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бронирование номера - Сладкие сны</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.5; color: #222; background: #fff; }
+.page { width: 100%; margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
+a { color: inherit; }
+header { padding: 20px 24px; background: #e6e6e6; border-bottom: 1px solid #999; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+header .name { font-size: 24px; font-weight: bold; }
+header .slogan { font-size: 14px; color: #555; }
+header nav a { padding: 6px 14px; border: 1px solid #777; background: #fff; text-decoration: none; }
+main { flex: 1; padding: 24px; }
+h1 { font-size: 28px; margin: 0 0 20px; }
+h2 { font-size: 20px; margin: 0 0 12px; }
+footer { padding: 20px 24px; background: #d0d0d0; border-top: 1px solid #999; }
+footer h2 { font-size: 18px; margin: 0 0 10px; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 24px; }
+.ph { background: #ccc; border: 1px solid #999; display: flex; align-items: center; justify-content: center; color: #555; text-align: center; }
+.btn { display: inline-block; padding: 10px 20px; border: 1px solid #555; background: #bbb; color: #222; font: inherit; text-decoration: none; cursor: pointer; }
+.btn.light { background: #fff; }
+.box { border: 1px solid #999; padding: 16px; background: #f5f5f5; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+.card { border: 1px solid #999; background: #fff; display: flex; flex-direction: column; }
+.card .ph { height: 140px; border: 0; border-bottom: 1px solid #999; }
+.card .in { padding: 12px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card .cat { font-size: 13px; color: #555; }
+.card .title { font-weight: bold; font-size: 18px; }
+.card .btn { margin-top: auto; text-align: center; }
+.filter { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.filter label { margin-right: 14px; }
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field label { display: block; font-size: 14px; margin-bottom: 4px; }
+.field .input { border: 1px solid #777; background: #fff; height: 38px; padding: 8px 10px; color: #888; font-size: 14px; }
+.field .hint { font-size: 12px; color: #666; margin-top: 3px; }
+.two { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: start; }
+.note { font-size: 13px; color: #666; margin-top: 6px; }
+@media (max-width: 760px) { .cards { grid-template-columns: 1fr; } .two, .form { grid-template-columns: 1fr; } footer ul { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div>
+    <div class="name">Сладкие сны</div>
+    <div class="slogan">Приезжайте как гости, уезжайте как друзья!</div>
+  </div>
+  <nav><a href="catalog.html">Каталог</a></nav>
+</header>
+<main>
+<h1>Бронирование номера</h1>
+<div class="two">
+  <div class="box">
+    <h2>Данные для бронирования</h2>
+    <div class="form">
+<div class="field">
+  <label>Имя *</label>
+  <div class="input"></div>
+  <div class="hint">Кириллица, пробелы, точки и тире</div>
+</div>
+<div class="field">
+  <label>Фамилия *</label>
+  <div class="input"></div>
+  <div class="hint">Кириллица, пробелы, точки и тире</div>
+</div>
+<div class="field">
+  <label>Телефон *</label>
+  <div class="input">+7(XXX)XXX-XX-XX</div>
+  <div class="hint">Формат: +7(XXX)XXX-XX-XX</div>
+</div>
+<div class="field">
+  <label>E-mail *</label>
+  <div class="input">name@example.ru</div>
+  <div class="hint">Адрес электронной почты</div>
+</div>
+<div class="field">
+  <label>Дата заезда *</label>
+  <div class="input">ДД.ММ.ГГГГ</div>
+  <div class="hint">Формат: ДД.ММ.ГГГГ</div>
+</div>
+<div class="field">
+  <label>Дата выезда *</label>
+  <div class="input">ДД.ММ.ГГГГ</div>
+  <div class="hint">Формат: ДД.ММ.ГГГГ</div>
+</div>
+    </div>
+    <p style="margin:20px 0 0">
+      <button class="btn" type="button">Отправить заявку</button>
+      <a class="btn light" href="catalog.html">Назад в каталог</a>
+    </p>
+  </div>
+  <div class="card">
+    <div class="ph">Изображение</div>
+    <div class="in">
+      <div class="cat">Выбранный номер</div>
+      <div class="title">Номер 201, студия</div>
+      <div>Цена: 4 600 ₽ / сутки</div>
+      <div class="note" style="margin:0">Кухонный уголок, полный санузел, двуспальная кровать, телевизор, холодильник</div>
+    </div>
+  </div>
+</div>
+<div class="box" style="margin-top:24px">
+  <h2>Сообщение после успешной отправки</h2>
+  <p style="margin:0">Заявка отправлена. Статус заявки: «Новая». Администратор уточнит данные по телефону.</p>
+</div>
+</main>
+<footer>
+  <h2>Контакты</h2>
+  <ul>
+    <li>Адрес: г. Москва, ул. Ивовая, 48</li>
+    <li>Режим работы: Пн-Пт, с 8:00 до 17:00</li>
+    <li>Телефон: 8 (800) 555-35-35</li>
+    <li>E-mail: обращения@СладкиеСны.рф</li>
+  </ul>
+</footer>
+</div>
+</body>
+</html>
